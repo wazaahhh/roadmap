@@ -1,50 +1,23 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Roadmap : DEN2DEN">
+<div class="home">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <h1 class="page-heading">Posts</h1>
 
-    <title>Roadmap</title>
-  </head>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <body>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/wazaahhh/roadmap">View on GitHub</a>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-          <h1 id="project_title">Roadmap</h1>
-          <h2 id="project_tagline">DEN2DEN</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="planning-our-roadtrip" class="anchor" href="#planning-our-roadtrip" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Planning our roadtrip</h3>
-<p>Essentially a map with the places we plan to visit.</p>
-
-<p><h3><a href="map.html">Look at the map</a></h3></p>
-      </section>
-
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Roadmap maintained by <a href="https://github.com/wazaahhh">wazaahhh</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-
-
-  </body>
-</html>
+</div>
