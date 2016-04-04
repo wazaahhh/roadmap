@@ -10,8 +10,8 @@ title: project roadmap
 email: wazaahhh@protonmail.ch
 description: > # this means to ignore newlines until "baseurl:"
   road map for our 5 weeks motorhome trip, from Denver to Denver.
-baseurl: "http://wazaahhh.github.io/roadmap/" # the subpath of your site, e.g. /blog
-url: "http://wazaahhh.github.io/roadmap/" # the base hostname & protocol for your site
+baseurl: "/roadmap" # the subpath of your site, e.g. /blog
+url: "http://wazaahhh.github.io" # the base hostname & protocol for your site
 twitter_username: tmaillart
 github_username:  wazaahhh
 
