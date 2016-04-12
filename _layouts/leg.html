@@ -9,6 +9,35 @@ layout: default
   </header>
 
   <div class="post-content" itemprop="articleBody">
+
+    <table  width="600">
+        <tr>
+            <td valign="top">
+              <h4>
+                Leg Summary:
+              </h4>
+              <span class="post-meta">Departure : {{ page.o_loc}} | {{page.o_date}}</span><br>
+              <span class="post-meta">Arrival : {{ page.d_loc}} | {{page.d_date}}</span><br>
+              <span class="post-meta">Stay until : {{page.s_date}}</span><br>
+            </td>
+            <td align ="right"><img src={{page.d_img_url}} alt="Smiley face" height="180" width="250"></td>
+        </tr>
+        <br><br>
+    </table>
+
+    <br><br>
+
+    <h4>
+      Where we stay:
+    </h4>
+
+    {% for stay in page.stay_loc %}
+      {% for date in stay['dates'] %}
+        <span class="post-meta"> {{date}} | {{stay['place']}}</span><br>
+      {%endfor %}
+    {% endfor %}
+    <span class="post-meta"> {{page.s_date}} | Departure</span><br>
+
     {{ content }}
   </div>
 
