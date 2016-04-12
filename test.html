@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Legs</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    {% if post.layout == 'leg' %}
+      <li>
+
+        {% for stay in post.stay_loc %}
+          {{stay}}<br>
+        {% endfor %}
+
+
+        <table  width="600">
+            <tr>
+                <td valign="top">
+                  <h2>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </h2>
+                  <span class="post-meta">Departure : {{ post.o_loc}} | {{post.o_date}}</span><br>
+                  <span class="post-meta">Arrival : {{ post.d_loc}} | {{post.d_date}}</span><br>
+                  <span class="post-meta">Stay until : {{post.s_date}}</span><br>
+                </td>
+                <td align ="right"><img src={{post.d_img_url}} alt="Smiley face" height="180" width="250"></td>
+            </tr>
+            <br><br>
+        </table>
+
+
+
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
