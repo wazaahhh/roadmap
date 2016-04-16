@@ -38,6 +38,19 @@ layout: default
     {% endfor %}
     <span class="post-meta"> {{page.s_date}} | Departure</span><br>
 
+    <br><br>
+
+    <h4>
+     What we expect to see:
+    </h4>
+
+    {% for visit in page.visit_loc %}
+      {% for date in visit['dates'] %}
+        <span class="post-meta"> {{date}} |  <a href={{visit['url']}} target="_blank" >{{visit['description']}}</a> | {{visit['place']}} | </span><br>
+      {%endfor %}
+    {% endfor %}
+
+
     {{ content }}
   </div>
 
