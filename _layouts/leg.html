@@ -46,7 +46,7 @@ layout: default
 
     {% for visit in page.visit_loc %}
       {% for date in visit['dates'] %}
-        <span class="post-meta"> {{date}} |  <a href={{visit['url']}} target="_blank" >{{visit['description']}}</a> | {{visit['place']}} | </span><br>
+        <span class="post-meta"> {{date}} |  <a href={{visit['url']}} target="_blank" >{{visit['description']}}</a> | {{visit['place']}} </span><br>
       {%endfor %}
     {% endfor %}
 
