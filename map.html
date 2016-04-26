@@ -24,6 +24,7 @@
         border: 1px solid #999;
       }
     </style>
+    
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
 
     <script>
@@ -59,7 +60,7 @@
 			  destination: end,
 			  waypoints: waypts,
 			  optimizeWaypoints: false,
-			  travelMode: google.maps.TravelMode.DRIVING
+			  travelMode: google.maps.TravelMode.DRIVING,
 		  };
 		  directionsService.route(request, function(response, status) {
 			if (status == google.maps.DirectionsStatus.OK) {
@@ -68,6 +69,7 @@
 		  });
 		  routes_list.push(directionsDisplay);
 		}
+
 		function createRoutes(route) {
 			// Google's free map API is limited to 10 waypoints so need to break into batches
 			route.push(route[0]);
@@ -85,13 +87,19 @@
             "Monument Valley, UT",
             "Santa Fe, NM",
             "Austin, TX",
-            "French Quarter, New Orleans, LA",
-            "Memphis, TN",
-            "Mammoth Cave National Park, Mammoth Cave Pkwy, Mammoth Cave, KY",
-	          "Mount Rushmore National Memorial, South Dakota 244, Keystone, SD",
+            "French Quarter, New Orleans, Louisiana",
+            "Memphis TN",
+            "Nashville TN",
+            "Mount Rushmore National Memorial, South Dakota 244, Keystone, SD",
             "Thunder Basin National Grassland,WY",
-            "Yellowstone National Park, WY 82190",
-            "Denver, Colorado"];
+            "Yellowstone, WY",
+            "Grand Teton National Park,WY"]
+//            "Mount Rushmore National Memorial, South Dakota 244, Keystone, SD",
+//            "Thunder Basin National Grassland,WY",
+//            "Yellowstone National Park, WY 82190",]
+            // "Mammoth Cave National Park, Mammoth Cave Pkwy, Mammoth Cave, KY",
+
+            // "Denver, Colorado"];
 //					"Pikes Peak, Colorado",
 					// "Carlsbad Caverns National Park, Carlsbad, NM",
 					// "The Alamo, Alamo Plaza, San Antonio, TX",
