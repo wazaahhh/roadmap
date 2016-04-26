@@ -28,7 +28,7 @@ layout: default
     <br><br>
 
     <h4>
-      Where we stay:
+      Stay Places:
     </h4>
 
     {% for stay in page.stay_loc %}
@@ -41,7 +41,7 @@ layout: default
     <br><br>
 
     <h4>
-     What we expect to see:
+     Sightseeings:
     </h4>
 
     {% for visit in page.visit_loc %}
@@ -52,6 +52,16 @@ layout: default
 
 
     {{ content }}
+
+    <br><br>
+
+    <h4>
+    Photostream:
+    </h4>
+
+    <a data-flickr-embed="true" data-footer="False"  href={{page.flickr_album}} title="leg1"><img src="https://farm2.staticflickr.com/1624/26584061241_20a25abdfc_z.jpg" width="600" height="400" alt="leg1"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+
   </div>
 
 </article>
