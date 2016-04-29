@@ -18,7 +18,7 @@ layout: default
               </h4>
               <span class="post-meta">Departure : {{ page.o_loc}} | {{page.o_date}}</span><br>
               <span class="post-meta">Arrival : {{ page.d_loc}} | {{page.d_date}}</span><br>
-              <span class="post-meta">Stay until : {{page.s_date}}</span><br>
+              <span class="post-meta">Stay until: {{page.s_date}}</span><br>
             </td>
             <td align ="right"><img src={{page.d_img_url}} alt="Smiley face" height="180" width="250"></td>
         </tr>
@@ -36,12 +36,12 @@ layout: default
         <span class="post-meta"> {{date}} | {{stay['place']}}</span><br>
       {%endfor %}
     {% endfor %}
-    <span class="post-meta"> {{page.s_date}} | Departure</span><br>
+
 
     <br><br>
 
     <h4>
-     Sightseeings:
+     Sightseeings and visits:
     </h4>
 
     {% for visit in page.visit_loc %}
